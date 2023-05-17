@@ -1,0 +1,16 @@
+f1_dbt_poc:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      host: "{{ env_var('DBT_REDSHIFT_HOST') }}"
+      user: "{{ env_var('DBT_REDSHIFT_USER') }}"
+      password: "{{ env_var('DBT_REDSHIFT_PASSWORD') }}"
+      port: 5439
+      dbname: dev
+      schema: dev
+      threads: 4
+      keepalives_idle: 240 # default 240 seconds
+      connect_timeout: 10 # default 10 seconds
+      sslmode: require
+      ra3_node: true

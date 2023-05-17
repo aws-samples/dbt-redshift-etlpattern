@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: user_data
+    description: "Userdata from fantasy"
+    columns:
+      - name: subscriber_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: user_data_dal
+    description: "user data with dal lookup data"
+    columns:
+      - name: teamname
+        description: "referenced column from dal and it cannot be null"
+        tests:
+          - not_null

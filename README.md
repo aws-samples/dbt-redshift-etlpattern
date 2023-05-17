@@ -1,11 +1,13 @@
-## My Project
+## DBT Redshift ETL Pattern
 
-TODO: Fill this README out!
+This project explains the AWS based solution on the DBT redshift including most widely used ETL patterns in DWH.
 
-Be sure to:
+## Requirements
 
-* Change the title in this README
-* Edit your repository description on GitHub
+1. Install dbt-redshift library. 
+        ```pip install dbt-redshift```
+2. Running AWS Redshift cluster. [More info](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-launch-sample-cluster.html)..
+3. Secrets Manager to hold the Redshift Cluster credentials.
 
 ## Security
 
