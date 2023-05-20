@@ -28,5 +28,5 @@ echo "Generate documentation"
 dbt docs generate --profiles-dir . --project-dir .
 echo ""
 
-echo "Copying dbt outputs to s3 bucket fom-dev-martech-dbt-documentation for hosting"
+echo "Copying dbt outputs to s3 bucket for hosting"
 aws s3 cp --recursive --exclude="*" --include="*.json" --include="*.html" dbt/target/ s3://<BucketName>/REDSHIFT_POC/
