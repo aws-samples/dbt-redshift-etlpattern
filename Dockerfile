@@ -4,7 +4,7 @@ FROM python:3
 
 ENTRYPOINT ["/bin/bash", "-l", "-c"]
 
-ADD f1_dbt_poc /f1_dbt_poc
+ADD dbt_redshift /dbt_redshift
 
 RUN pip install -U pip
 
@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir dbt-core
 RUN pip install --no-cache-dir dbt-redshift
 RUN pip install --no-cache-dir boto3
 
-WORKDIR /f1_dbt_poc
+WORKDIR /dbt_redshift
 RUN chmod -R 755 .
 
 CMD ["./run_dbt.sh"]
