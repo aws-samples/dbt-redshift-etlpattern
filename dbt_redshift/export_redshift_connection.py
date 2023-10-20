@@ -1,10 +1,10 @@
 import boto3
 from botocore.exceptions import ClientError
 import json
+import os
 
-
-secret_name = "redshift_db_secret_dev"
-region_name = "eu-west-1"
+secret_name = os.environ.get("secret_name")
+region_name = os.environ.get("region_name")
 
 # Create a Secrets Manager client
 session = boto3.session.Session()
