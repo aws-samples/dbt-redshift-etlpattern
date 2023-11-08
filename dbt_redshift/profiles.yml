@@ -1,4 +1,4 @@
-f1_dbt_poc:
+dbt_poc:
   target: dev
   outputs:
     dev:

@@ -29,4 +29,4 @@ dbt docs generate --profiles-dir . --project-dir .
 echo ""
 
 echo "Copying dbt documentation files for hosting"
-aws s3 cp --recursive --exclude="*" --include="*.json" --include="*.html" dbt/target/ s3://<BucketName>/REDSHIFT_POC/
+aws s3 cp --recursive --exclude="*" --include="*.json" --include="*.html" target/ s3://<BUCKET>/dbt_poc_test/
