@@ -1,3 +1,3 @@
 {{ config(materialized='table', full_refresh = true) }}
 
-select * from {{ ref('fantasy_user_data') }}
+select * from {{ ref('input_user_data') }}
